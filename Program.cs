@@ -9,23 +9,44 @@
 // [-4 3 4 1], 3 => Да
 
 // тип_данных[] имяМассива =
-int[] array = {11, 22, 33, 44, 55, 66, 77, 88, 99 };
-int numberForSearch = 4;
-bool isFound = false; // число не найдено
-// точка старта, условие, увеличение счетчика;
+
+// int[] array = {11, 22, 33, 44, 55, 66, 77, 88, 99 };
+// int numberForSearch = 4;
+// bool isFound = false; // число не найдено
+// // точка старта, условие, увеличение счетчика;
+// for(int i = 0; i < array.Length; i++)
+// {
+//     if(numberForSearch == array[i])
+//     {
+//         isFound = true;
+//         break;
+//     }
+// }
+// if(isFound)
+// {
+//     Console.WriteLine("Да");
+// }
+// else
+// {
+//     Console.WriteLine("Нет");
+// }
+
+
+
+// Задание 2. Работа в сессионных залах
+// Задайте массив из 10 элементов, заполненный числами из
+// промежутка [-10, 10]. Замените отрицательные элементы на
+// положительные, а положительные на отрицательные.
+// Пример
+// [1 -5 6]
+// => [-1 5 -6]
+
+// array{i} = array{i} * -1; - array{i}*= -1;  
+
+int[] array = {-1, -2, -3, -4, -5, 66, 77, 88, 99, 0 };
 for(int i = 0; i < array.Length; i++)
 {
-    if(numberForSearch == array[i])
-    {
-        isFound = true;
-        break;
-    }
+    array[i] *= -1;  
+
 }
-if(isFound)
-{
-    Console.WriteLine("Да");
-}
-else
-{
-    Console.WriteLine("Нет");
-}
+Console.WriteLine($"Массив: [{string.Join(": ", array)}]");
